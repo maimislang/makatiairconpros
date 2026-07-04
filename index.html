@@ -505,7 +505,7 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-inner">
-    <h1>Aircon Cleaning Makati —<br/><span>Local Pros, Fast Response,</span><br/>Transparent Pricing</h1>
+    <h1>Aircon Cleaning in Makati and BGC —<br/><span>Local Pros, Fast Response,</span><br/>Transparent Pricing</h1>
     <p class="hero-sub">Tell us what you need and we will match you with a local aircon and HVAC technician — for homes, offices, and commercial spaces in Makati and BGC.</p>
     <div class="hero-areas">
       <span class="area-tag">Salcedo Village</span>
@@ -779,6 +779,11 @@
       document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
       if (!isOpen) item.classList.add('open');
     });
+  });
+
+  // GA4: count quote-form submissions as leads
+  document.querySelector('form').addEventListener('submit', () => {
+    gtag('event', 'generate_lead', { form_id: 'quote_form' });
   });
 </script>
 
